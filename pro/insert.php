@@ -1,6 +1,6 @@
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
     <?php
@@ -64,7 +64,7 @@
     }
 	}
     echo "<center>Done!</center>";
-    echo "<center><input class=btn type=button class=btn value='Go Home' onClick=window.location.href='index.php'></center>";
+    echo "<center><input class=btn type=button class=btn value='Go Home' onClick=window.location.href='../index.php'></center>";
 
     // close connection
 

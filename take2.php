@@ -4,7 +4,7 @@
     <html lang="en">
 
     <head>
-	<script src="quizzer.js" type="text/javascript"></script>
+	<script src="pro/quizzer.js" type="text/javascript"></script>
     <meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
     <title>Add Record Form</title>

@@ -6,7 +6,7 @@
     <head>
 	<script src="quizzer.js" type="text/javascript"></script>
     <meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
 
     <title>Add Record Form</title>
 
@@ -16,7 +16,7 @@
 	
 	<center>
 		
-    <form action="take3.php" method="post">
+    <form action="../take3.php" method="post">
 
 	<table border=1>
 	<tr><td>Name<td>Roll No.<td>Stream<td>College<td>Score</tr>
@@ -56,7 +56,7 @@ $conn->close();
     
   	<br>
 	</table>	
-	<input class=btn type=button value='Go Home' onClick=window.location.href='index.php'>	
+	<input class=btn type=button value='Go Home' onClick=window.location.href='../index.php'>	
 	
     </form>
 

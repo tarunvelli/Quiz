@@ -6,7 +6,7 @@
     <head>
 	<script src="quizzer.js" type="text/javascript"></script>
     <meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
     <title>Add Record Form</title>
 
     </head>
@@ -48,7 +48,7 @@ $conn->close();
 ?> 
     
   	<br>	
-	<input class=btn type=button value='Go Home' onClick=window.location.href='index.php'>	
+	<input class=btn type=button value='Go Home' onClick=window.location.href='../index.php'>	
 	
     
 

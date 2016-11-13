@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
 <center>
@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 </form>
-	<input class=btn type=button value='Go Home' onClick=window.location.href='index.php'>
+	<input class=btn type=button value='Go Home' onClick=window.location.href='../index.php'>
 </center>
 </body>
 </html>
