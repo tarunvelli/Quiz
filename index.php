@@ -61,13 +61,13 @@ mysqli_query($link, $sql);
 <center>
 	<div>
 			
-			<input class=btn type=button value="Make test" onClick="window.location.href='insert.html'">
+			<input class=btn type=button value="Make test" onClick="window.location.href='pro/insert.html'">
 			<br><br><br><br>
 			<input class=btn type=button value="Take test" onClick="window.location.href='take.php'">
 			<br><br><br><br>
-			<input class=btn type=button value="Results" onClick="window.location.href='results.php'">
+			<input class=btn type=button value="Results" onClick="window.location.href='pro/results.php'">
 			<br><br><br><br>
-			<input class=btn type=button value="Delete Test" onClick="window.location.href='delete.php'">
+			<input class=btn type=button value="Delete Test" onClick="window.location.href='pro/delete.php'">
 		
 	</div>
 </center>
