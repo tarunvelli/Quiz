@@ -60,7 +60,7 @@
     // attempt insert query execution
 
 	
-	$sql = "INSERT INTO results (name, rno, stream, college, score, quiz) VALUES ('$name', $rollNo , '$stream', '$college', $s, '$tab')";
+	$sql = "INSERT INTO results (name, rno, stream, college, score, quiz) VALUES ('$name', '$rollNo' , '$stream', '$college', $s, '$tab')";
 
     if($conn->query($sql)){
 

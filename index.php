@@ -39,7 +39,7 @@ $val = mysqli_query($link,"select 1 from results LIMIT 1");
 
 if($val === false)
 {
-$sql = "create table results(name varchar(20),rno int(3),stream varchar(10),college varchar(20),score int(2), quiz varchar(20))";
+$sql = "create table results(name varchar(20),rno varchar(20),stream varchar(10),college varchar(20),score int(2), quiz varchar(20))";
 mysqli_query($link, $sql);	
 //echo "created results! <br>"; 
 }

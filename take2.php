@@ -53,7 +53,6 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
      // output data of each row
      while($row = $result->fetch_assoc()) {
-         //echo "<tr><td>" . $row["name"]. "</td><td>" . $row["rno"]. "</td><td>" . $row["score"]. "</td></tr>";
      	echo "<tr><td colspan=2>Q)". $row["q"]."</tr>";
 		echo "<tr><td> <input type=radio name=q".$row["s"]." value=1> A) ". $row["a1"]."<td> <input type=radio name=q".$row["s"]." value=2> B) ". $row["a2"]."</tr>";
 		echo "<tr><td> <input type=radio name=q".$row["s"]." value=3> C) ". $row["a3"]."<td> <input type=radio name=q".$row["s"]." value=4> D) ". $row["a4"]."</tr>";
