@@ -67,8 +67,8 @@ mysqli_query($link, $sql);
 			<br><br><br><br>
 			<input class=btn type=button value="Results" onClick="window.location.href='pro/results.php'">
 			<br><br><br><br>
-			<input class=btn type=button value="Delete Test" onClick="window.location.href='pro/delete.php'">
-		
+<!--			<input class=btn type=button value="Delete Test" onClick="window.location.href='pro/delete.php'">
+-->		
 	</div>
 </center>
 </body>
