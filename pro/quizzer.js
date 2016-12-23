@@ -49,6 +49,7 @@ function addQ() {
 	r1.setAttribute("type","radio");
 	r1.setAttribute("name","a" + c );
 	r1.setAttribute("value","1");
+	r1.setAttribute("checked","checked");
 	var r2=document.createElement("input");
 	r2.setAttribute("type","radio");
 	r2.setAttribute("name","a" + c );
