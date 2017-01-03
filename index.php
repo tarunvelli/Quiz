@@ -5,19 +5,17 @@
 	</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style>
-	
 	div {
 	height:50%;
 	position:relative;
 	top:20%;
 	}
-	</style>	
+	</style>
 </head>
 <body>
 <?php
 
 $link=mysqli_connect("localhost","root","password");
-	 
 	if($link === false){
 
         die("ERROR: Could not connect. " . mysqli_connect_error());
