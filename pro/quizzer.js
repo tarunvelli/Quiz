@@ -6,8 +6,8 @@ function op() {
 	stream=document.getElementById("stream").value;
 	coll=document.getElementById("college").value;
 	if (confirm("Please confirm your details \n Name : "+nam+"\n Roll no : "+rno+"\n Stream : "+stream+"\n College : "+coll) == true) {
-       disab();
-    } 
+		disab();
+	}
 }
 
 function disab() {
@@ -17,9 +17,9 @@ function disab() {
 
 var c=0;
 function addQ() {
-	
+
 	c++;
-	
+
 	var qs=document.createElement("span");
 	qs.innerHTML = "Question : ";
 	var o1s=document.createElement("span");
@@ -62,35 +62,35 @@ function addQ() {
 	r4.setAttribute("type","radio");
 	r4.setAttribute("name","a" + c );
 	r4.setAttribute("value","4");
-	
+
 	document.getElementById("f1").appendChild(document.createElement("br"));
 
 	document.getElementById("f1").appendChild(qs);
 	document.getElementById("f1").appendChild(q);
 	document.getElementById("f1").appendChild(document.createElement("br"));
 
-	
+
 	document.getElementById("f1").appendChild(o1s);
 	document.getElementById("f1").appendChild(r1);
 	document.getElementById("f1").appendChild(a1);
 	document.getElementById("f1").appendChild(document.createElement("br"));
 
-	
+
 	document.getElementById("f1").appendChild(o2s);
 	document.getElementById("f1").appendChild(r2);
 	document.getElementById("f1").appendChild(a2);
 	document.getElementById("f1").appendChild(document.createElement("br"));
 
-	
+
 	document.getElementById("f1").appendChild(o3s);
 	document.getElementById("f1").appendChild(r3);
 	document.getElementById("f1").appendChild(a3);
 	document.getElementById("f1").appendChild(document.createElement("br"));
 
-	
+
 	document.getElementById("f1").appendChild(o4s);
 	document.getElementById("f1").appendChild(r4);
 	document.getElementById("f1").appendChild(a4);
 	document.getElementById("f1").appendChild(document.createElement("br"));
-	
+
 }
