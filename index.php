@@ -4,7 +4,8 @@
 	<title>
 		Home
 	</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
 	<style>
 	div {
 		height:50%;
