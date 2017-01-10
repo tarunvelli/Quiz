@@ -3,8 +3,8 @@
 <head>
   <script src="quizzer.js" type="text/javascript"></script>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/skeleton.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
   <title>Add Record Form</title>
 </head>
 <body>
