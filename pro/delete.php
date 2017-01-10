@@ -10,10 +10,7 @@
 
       <?php
 
-      $servername = "localhost";
-      $username = "root";
-      $password = "password";
-      $dbname = "test";
+      require '../config/config.php';
 
       // Create connection
       $conn = new mysqli($servername, $username, $password, $dbname);

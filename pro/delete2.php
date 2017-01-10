@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="quizzer.js" type="text/javascript"></script>
+  <script src="../scripts/quizzer.js" type="text/javascript"></script>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/skeleton.css">
@@ -14,10 +14,7 @@
 
     $tab = $_POST['dbtable'];
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "password";
-    $dbname = "test";
+    require '../config/config.php';
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);

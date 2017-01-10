@@ -8,8 +8,8 @@
 	<?php
 
 	/* Attempt MySQL server connection. */
-
-	$link = mysqli_connect("localhost", "root", "password", "test");
+	require 'config/config.php';
+	$link = mysqli_connect($servername, $username, $password, $dbname);
 
 	// Check connection
 	if($link === false){
@@ -40,7 +40,7 @@
 		}
 	}
 	echo "<center>Done!</center>";
-	echo "<center><input class=btn type=button class=btn value='Go Home' onClick=window.location.href='../index.php'></center>";
+	echo "<center><input class=btn type=button class=btn value='Go Home' onClick=window.location.href='index.php'></center>";
 
 	mysqli_close($link);
 	?>

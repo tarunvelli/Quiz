@@ -10,10 +10,7 @@
 
 			<?php
 
-			$servername = "localhost";
-			$username = "root";
-			$password = "password";
-			$dbname = "test";
+			require 'config/config.php';
 
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
@@ -39,7 +36,7 @@
 			$conn->close();
 			?>
 		</form>
-		<input class=btn type=button value='Go Home' onClick=window.location.href='../index.php'>
+		<input class=btn type=button value='Go Home' onClick=window.location.href='index.php'>
 	</center>
 </body>
 </html>

@@ -17,14 +17,17 @@
 <body>
 	<?php
 
-	$link=mysqli_connect("localhost","root","password");
+	require 'config/config.php';
+
+	$link=mysqli_connect($servername, $username, $password);
+
 	if($link === false){
 		die("ERROR: Could not connect. " . mysqli_connect_error());
 	}
 
-	mysqli_query($link,"CREATE DATABASE IF NOT EXISTS test");
+	mysqli_query($link,"CREATE DATABASE IF NOT EXISTS $dbname");
 
-	$link = mysqli_connect("localhost", "root", "password", "test");
+	$link = mysqli_connect($servername, $username, $password, $dbname);
 	if($link === false){
 		die("ERROR: Could not connect. " . mysqli_connect_error());
 	}
@@ -47,15 +50,14 @@
 	?>
 	<center>
 		<div>
-			<input class=btn type=button value="Make test" onClick="window.location.href='pro/insert.html'">
+			<input class=btn type=button value="Make test" onClick="window.location.href='insert.html'">
 			<br><br><br><br>
 			<input class=btn type=button value="Take test" onClick="window.location.href='take.php'">
 			<br><br><br><br>
-			<input class=btn type=button value="Results" onClick="window.location.href='pro/results.php'">
+			<input class=btn type=button value="Results" onClick="window.location.href='results.php'">
 			<br><br><br><br>
-			<!--
 			<input class=btn type=button value="Delete Test" onClick="window.location.href='pro/delete.php'">
-		-->
+
 	</div>
 </center>
 </body>
