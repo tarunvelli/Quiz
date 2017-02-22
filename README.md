@@ -1,16 +1,35 @@
 # Quiz
-application to create/take quiz
 
-Should be run on a server with php and mysql installed.
+Application to create/take quiz
+
 Tested on Apache2.
 
-########################################################
+## dependencies
 
-server : "localhost"
-username : "root"
-password : "password"
+PHP
+MySQL
+Apache
 
-change the above values in all the files to the values of your server/username/password
+## Configuration
 
-#######################################################
+> server : "localhost"
 
+> username : "root"
+
+> password : "password"
+
+change the above values in the config/config.php to the values of your server/username/password
+
+## Database creation/initialization
+
+Navigating to the index.php from browser creates the necesaary database if it is not present 
+
+## Deployment instructions
+
+instructions for apache
+
+> cd /var/www/html/(any subdirectory if needed)
+
+> git clone https://github.com/tarunvelli/Quiz.git
+
+navigate to said address via browser
