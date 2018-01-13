@@ -7,7 +7,10 @@ var resultsSchema = new Schema({
 	'stream' : String,
 	'college' : String,
 	'score' : Number,
-	'test_id' : {type: Schema.ObjectId, ref: 'tests'}
+	'test_id' : {
+		type: Schema.Types.ObjectId,
+		ref: 'tests'
+	}
 });
 
 module.exports = mongoose.model('results', resultsSchema);

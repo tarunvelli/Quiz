@@ -3,8 +3,23 @@
   <head>
     <title>{{title}}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/normalize.css' />
+    <link rel='stylesheet' href='/stylesheets/skeleton.css' />
   </head>
   <body>
-    {{{body}}}
+    <center>
+      <div class="container">
+
+        {{{body}}}
+
+        {{#if index}}
+        {{else}}
+        <a href='/' >
+          <button class='margin_button'>Home</button>
+        </a>
+        {{/if}}
+
+      </div>
+    </center>
   </body>
 </html>

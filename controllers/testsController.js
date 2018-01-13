@@ -18,7 +18,15 @@ module.exports = {
                     error: err
                 });
             }
-            return res.json(testss);
+
+            var title = 'Tests'
+
+            if ( req.query.source === 'view' )
+              title = 'Results of Test'
+            else if ( req.query.source === 'take' )
+              title = 'Take Test'
+
+            return res.render('tests', { title: title, test:testss });
         });
     },
 
@@ -82,7 +90,7 @@ module.exports = {
             }
 
             tests.name = req.body.name ? req.body.name : tests.name;
-			
+
             tests.save(function (err, tests) {
                 if (err) {
                     return res.status(500).json({
