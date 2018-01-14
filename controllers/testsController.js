@@ -67,7 +67,7 @@ module.exports = {
                     error: err
                 });
             }
-            return res.status(201).json(tests);
+            return res.status(201).render('questions', { title: 'Add questions', test:tests });
         });
     },
 

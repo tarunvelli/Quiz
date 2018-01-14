@@ -46,28 +46,33 @@ module.exports = {
     /**
      * questionsController.create()
      */
-    create: function (req, res) {
-        var questions = new questionsModel({
-			question : req.body.question,
-			1 : req.body['1'],
-			2 : req.body['2'],
-			3 : req.body['3'],
-			4 : req.body['4'],
-			correct : req.body.correct,
-			test_id : req.body.test_id
+     create: function (req, res) {
 
-        });
+       var reqArray = []
 
-        questions.save(function (err, questions) {
-            if (err) {
-                return res.status(500).json({
-                    message: 'Error when creating questions',
-                    error: err
-                });
-            }
-            return res.status(201).json(questions);
-        });
-    },
+       req.body.question.forEach( (q,i) => {
+         var parsed = {}
+         parsed.question = q
+         parsed.one = req.body.one[i]
+         parsed.two = req.body.two[i]
+         parsed.three = req.body.three[i]
+         parsed.four = req.body.four[i]
+         parsed.correct = req.body[`correct[${i}]`]
+         parsed.test_id = req.body.test_id
+         reqArray.push(parsed)
+       } )
+
+       questionsModel.insertMany( reqArray, function (err, questions) {
+         if (err) {
+           return res.status(500).json({
+             message: 'Error when creating questions',
+             error: err
+           });
+         }
+       });
+       return res.status(201).json(reqArray);
+
+     },
 
     /**
      * questionsController.update()
@@ -87,11 +92,11 @@ module.exports = {
                 });
             }
 
-            questions.question = req.body.question ? req.body.question : questions.question;
-			questions['1'] = req.body['1'] ? req.body['1'] : questions['1'];
-			questions['2'] = req.body['2'] ? req.body['2'] : questions['2'];
-			questions['3'] = req.body['3'] ? req.body['3'] : questions['3'];
-			questions['4'] = req.body['4'] ? req.body['4'] : questions['4'];
+      questions.question = req.body.question ? req.body.question : questions.question;
+			questions.one = req.body.one ? req.body.one : questions.one;
+			questions.two = req.body.two ? req.body.two : questions.two;
+			questions.three = req.body.three ? req.body.three : questions.three;
+			questions.four = req.body.four ? req.body.four : questions.four;
 			questions.correct = req.body.correct ? req.body.correct : questions.correct;
 			questions.test_id = req.body.test_id ? req.body.test_id : questions.test_id;
 

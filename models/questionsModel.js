@@ -3,10 +3,10 @@ var Schema   = mongoose.Schema;
 
 var questionsSchema = new Schema({
 	'question' : String,
-	'1' : String,
-	'2' : String,
-	'3' : String,
-	'4' : String,
+	'one' : String,
+	'two' : String,
+	'three' : String,
+	'four' : String,
 	'correct' : String,
 	'test_id' : {
 	 	type: Schema.Types.ObjectId,

@@ -1,0 +1,46 @@
+<h1>{{test.name}}</h1>
+<h4>{{title}}</h4>
+
+<form action='/questions' method="post" id='form'>
+
+  <input type='hidden' name='test_id' value={{test.id}} >
+
+  <div class='question_template'>
+
+    <br>
+    <b>Question:</b> <input type="text" name="question" value="" size='60px'>
+
+    <div class="row">
+      <div class="six columns">
+        <b>Option 1:</b> <input type="text" name="one" value=""><input class='radio' type="radio" name="correct[0]" value="one">
+      </div>
+      <div class="six columns">
+        <b>Option 3:</b> <input type="text" name="three" value=""><input class='radio' type="radio" name="correct[0]" value="three">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="six columns">
+        <b>Option 2:</b> <input type="text" name="two" value=""><input class='radio' type="radio" name="correct[0]" value="two">
+      </div>
+      <div class="six columns">
+        <b>Option 4:</b> <input type="text" name="four" value=""><input class='radio' type="radio" name="correct[0]" value="four">
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+  </div>
+
+  <div class="row buttons_tray">
+
+    <div class="six columns">
+      <input class="margin_button" type="button" onclick="cloneQuestion()" value="Add question" >
+    </div>
+    <div class="six columns">
+      <input class='margin_button button-primary' type="submit" value="Done">
+    </div>
+  </div>
+
+</form>
