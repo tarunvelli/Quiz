@@ -1,0 +1,57 @@
+<h1>{{title}}</h1>
+
+<form action='/results' method="post">
+
+  <div id='section_one'>
+
+    <table>
+      <tr>
+        <td>Name : <td><input type="text" name="name" value="">
+      </tr>
+      <tr>
+        <td>Roll Number : <td><input type="text" name="roll_no" value="">
+      </tr>
+      <tr>
+        <td>Stream : <td><input type="text" name="stream" value="">
+      </tr>
+      <tr>
+        <td>College : <td><input type="text" name="college" value="">
+      </tr>
+    </table>
+
+    <button class='margin_button button-primary' type="button" name="button" onclick="nextSection()">Continue</button>
+
+  </div>
+  <div id='section_two'>
+
+    <table>
+    {{#each questions}}
+
+        <tr>
+          <td span=2> <b>Question:</b> {{this.question}}
+        </tr>
+        <tr>
+          <td>Option 1: {{this.one}}<td><input class='radio' type="radio" name="{{this.id}}" value="one">
+        </tr>
+        <tr>
+          <td>Option 2: {{this.two}}<td><input class='radio' type="radio" name="{{this.id}}" value="two">
+        </tr>
+        <tr>
+          <td>Option 3: {{this.three}}<td><input class='radio' type="radio" name="{{this.id}}" value="three">
+        </tr>
+        <tr>
+          <td>Option 4: {{this.four}}<td><input class='radio' type="radio" name="{{this.id}}" value="four">
+        </tr>
+        <tr>
+          <td span=2> <input type='hidden' name="{{this.id}}" value="{{this.correct}}">
+        </tr>
+
+    {{/each}}
+    </table>
+
+    <input type="hidden" name="test_id" value={{test_id}}>
+    <input class='margin_button button-primary' type="submit" value="Submit">
+
+  </div>
+
+</form>

@@ -10,8 +10,13 @@ module.exports = {
     /**
      * resultsController.list()
      */
+
     list: function (req, res) {
-        resultsModel.find(function (err, resultss) {
+        var searchParams = {}
+        if(req.query && req.query.test_id) {
+          searchParams.test_id = req.query.test_id
+        }
+        resultsModel.find(searchParams, function (err, resultss) {
             if (err) {
                 return res.status(500).json({
                     message: 'Error when getting results.',
@@ -47,25 +52,36 @@ module.exports = {
      * resultsController.create()
      */
     create: function (req, res) {
-        var results = new resultsModel({
-			name : req.body.name,
-			roll_no : req.body.roll_no,
-			stream : req.body.stream,
-			college : req.body.college,
-			score : req.body.score,
-			test_id : req.body.test_id
 
-        });
+      var score = 0
+      var body = req.body
+      Object.keys(body).forEach( key => {
 
-        results.save(function (err, results) {
-            if (err) {
-                return res.status(500).json({
-                    message: 'Error when creating results',
-                    error: err
-                });
-            }
-            return res.status(201).json(results);
-        });
+        if(body[key] instanceof Array && body[key].length===2 && body[key][0] === body[key][1] ){
+          score++
+        }
+
+      } )
+
+      var results = new resultsModel({
+        name : req.body.name,
+        roll_no : req.body.roll_no,
+        stream : req.body.stream,
+        college : req.body.college,
+        score : score,
+        test_id : req.body.test_id
+      });
+
+      results.save(function (err, results) {
+        if (err) {
+          return res.status(500).json({
+            message: 'Error when creating results',
+            error: err
+          });
+        }
+        return res.status(201).render('index', { title:"Done!", index:true })
+      });
+
     },
 
     /**

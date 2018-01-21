@@ -20,13 +20,16 @@ module.exports = {
             }
 
             var title = 'Tests'
+            var page = 'tests'
 
-            if ( req.query.source === 'view' )
+            if ( req.query.source === 'view' ) {
               title = 'Results of Test'
-            else if ( req.query.source === 'take' )
+              page = 'results'
+            } else if ( req.query.source === 'take' ) {
               title = 'Take Test'
+            }
 
-            return res.render('tests', { title: title, test:testss });
+            return res.render(page, { title:title, test:testss });
         });
     },
 

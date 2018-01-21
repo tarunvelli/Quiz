@@ -14,3 +14,10 @@ function cloneQuestion() {
   form.insertBefore(question_template, tray)
 
 }
+
+function nextSection() {
+
+  document.getElementById('section_one').style.display='none'
+  document.getElementById('section_two').style.display='inherit'
+
+}

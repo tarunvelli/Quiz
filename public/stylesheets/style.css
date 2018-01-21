@@ -6,3 +6,7 @@ body {
   margin: 20px;
   width: 300px;
 }
+
+#section_two {
+  display: none;
+}

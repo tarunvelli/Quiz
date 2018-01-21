@@ -11,15 +11,28 @@ module.exports = {
      * questionsController.list()
      */
     list: function (req, res) {
-        questionsModel.find(function (err, questionss) {
+
+      var searchParams = {}
+      var test_id = null
+      var title = 'Test'
+      if(req.query && req.query.test_id) {
+        searchParams.test_id = req.query.test_id
+        test_id = req.query.test_id
+      }
+
+      if(req.query && req.query.name) {
+        title = req.query.name
+      }
+        questionsModel.find(searchParams, function (err, questionss) {
             if (err) {
                 return res.status(500).json({
                     message: 'Error when getting questions.',
                     error: err
                 });
             }
-            return res.json(questionss);
+            res.render('take', { title:title, questions:questionss, test_id:test_id })
         });
+
     },
 
     /**
@@ -49,6 +62,7 @@ module.exports = {
      create: function (req, res) {
 
        var reqArray = []
+       if(req.body.question instanceof Array) {
 
        req.body.question.forEach( (q,i) => {
          var parsed = {}
@@ -62,6 +76,20 @@ module.exports = {
          reqArray.push(parsed)
        } )
 
+     } else {
+
+       var parsed = {}
+       parsed.question = req.body.question
+       parsed.one = req.body.one
+       parsed.two = req.body.two
+       parsed.three = req.body.three
+       parsed.four = req.body.four
+       parsed.correct = req.body[`correct[0]`]
+       parsed.test_id = req.body.test_id
+       reqArray.push(parsed)
+
+     }
+
        questionsModel.insertMany( reqArray, function (err, questions) {
          if (err) {
            return res.status(500).json({
@@ -70,7 +98,7 @@ module.exports = {
            });
          }
        });
-       return res.status(201).json(reqArray);
+       return res.status(201).render('index', { title:"Done!", index:true })
 
      },
 
