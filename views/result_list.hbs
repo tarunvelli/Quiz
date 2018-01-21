@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+
+<table>
+
+  <tr>
+    <th>Name<th>Roll Number<th>Stream<th>College<th>Score
+  </tr>
+
+  {{#each results}}
+
+  <tr>
+    <td>{{this.name}}<td>{{this.roll_no}}<td>{{this.stream}}<td>{{this.college}}<td>{{this.score}}
+  </tr>
+
+  {{/each}}
+
+</table>

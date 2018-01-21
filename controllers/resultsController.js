@@ -12,9 +12,13 @@ module.exports = {
      */
 
     list: function (req, res) {
+        var title = "Test Results"
         var searchParams = {}
         if(req.query && req.query.test_id) {
           searchParams.test_id = req.query.test_id
+        }
+        if(req.query && req.query.name) {
+          title = req.query.name
         }
         resultsModel.find(searchParams, function (err, resultss) {
             if (err) {
@@ -23,8 +27,8 @@ module.exports = {
                     error: err
                 });
             }
-            return res.json(resultss);
-        });
+            return res.status(200).render('result_list', { title:title, results:resultss })
+        }).sort( { score: -1 } );
     },
 
     /**
