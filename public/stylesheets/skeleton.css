@@ -222,6 +222,16 @@ input[type="button"].button-primary:focus {
   background-color: #1EAEDB;
   border-color: #1EAEDB; }
 
+button.button-danger {
+  color: #FFF;
+  background-color: #d9534f;
+  border-color: #d9534f; }
+
+button.button-danger:hover,
+button.button-danger:focus {
+  color: #FFF;
+  background-color: #c9302c;
+  border-color: #c9302c; }
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

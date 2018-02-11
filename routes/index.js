@@ -1,13 +1,29 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+var tests = require('./testsRoutes');
+var results = require('./resultsRoutes');
+var questions = require('./questionsRoutes');
+
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Quiz', index: true });
+  res.render('index', { title: 'Welcome!', index: true });
 });
 
-router.get('/create', function(req, res, next) {
-  res.render('create', { title: 'Create' });
+router.get('/signup', function(req, res, next) {
+  res.render('signup', { title: 'Sign up', index: true });
 });
+
+router.get('/login', function(req, res, next) {
+  res.render('login', { title: 'Log in', index: true });
+
+});
+
+router.get('/home', function(req, res, next) {
+  res.render('home', { title: 'Quiz', index: true });
+});
+
+router.use('/tests', tests);
+router.use('/results', results);
+router.use('/questions', questions);
 
 module.exports = router;

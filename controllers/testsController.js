@@ -27,6 +27,9 @@ module.exports = {
               page = 'results'
             } else if ( req.query.source === 'take' ) {
               title = 'Take Test'
+            } else if ( req.query.source === 'create' ) {
+              title = 'Create Test'
+              page = 'create'
             }
 
             return res.render(page, { title:title, test:testss });

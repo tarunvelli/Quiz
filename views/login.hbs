@@ -1,0 +1,33 @@
+<h1>{{title}}</h1>
+<br>
+<form name="main" action="done" onsubmit="return validate()" method="post" enctype="multipart/form-data">
+
+  <div class="row">
+    <div class="three columns offset-by-three right-text">
+      Email :
+    </div>
+    <div class="three columns">
+      <input type="text" name="userName" value="">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="three columns offset-by-three right-text">
+      Password :
+    </div>
+    <div class="three columns">
+      <input type="password" name="pass" value="">
+    </div>
+  </div>
+
+<input class="margin_button button-primary" type="submit" name="GetStarted" value="Login"><br>
+</form>
+
+<a href='/' >
+  <button class='margin_button'>Back</button>
+</a>
+
+<br>
+Do not have an account?
+<a href="/signup">SIGNUP</a>
+<br>

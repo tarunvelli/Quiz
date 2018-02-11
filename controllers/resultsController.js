@@ -83,7 +83,7 @@ module.exports = {
             error: err
           });
         }
-        return res.status(201).render('index', { title:"Done!", index:true })
+        return res.status(201).render('home', { title:"Done!", index:true })
       });
 
     },
