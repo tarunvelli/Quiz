@@ -10,3 +10,13 @@ body {
 #section_two {
   display: none;
 }
+
+.alert {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  height: 35px;
+  width: 300px;
+  line-height: 35px;
+  border-radius: 4px;
+}

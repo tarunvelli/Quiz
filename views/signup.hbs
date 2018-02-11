@@ -1,13 +1,16 @@
 <h1>{{title}}</h1>
+{{#if message}}
+    <div class="alert">{{message}}</div>
+{{/if}}
 <br>
-<form name="main" action="done" onsubmit="return validate()" method="post" enctype="multipart/form-data">
+<form action="/signup" method="post">
 
   <div class="row">
     <div class="three columns offset-by-three right-text">
       Email :
     </div>
     <div class="three columns">
-      <input type="text" name="userName" value="">
+      <input type="text" name="email" value="">
     </div>
   </div>
 
@@ -16,7 +19,7 @@
       Password :
     </div>
     <div class="three columns">
-      <input type="password" name="pass" value="">
+      <input type="password" name="password" value="">
     </div>
   </div>
 
@@ -25,11 +28,11 @@
       Type your Password again:
     </div>
     <div class="three columns">
-      <input type="password" name="pass_repeat" value="">
+      <input type="password" name="password_repeat" value="">
     </div>
   </div>
 
-<input class="margin_button button-primary" type="submit" name="GetStarted" value="Signup"><br>
+<input class="margin_button button-primary" type="submit" value="Signup"><br>
 </form>
 
 <a href='/' >

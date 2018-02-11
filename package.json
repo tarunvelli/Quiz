@@ -1,12 +1,26 @@
 {
   "name": "quiz",
-  "version": "0.0.0",
-  "private": true,
+  "version": "2.0.0",
   "scripts": {
     "start": "node ./bin/www"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tarunvelli/Quiz.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "passport",
+    "skeleton",
+    "quiz"
+  ],
+  "author": "tarunvelli@gmail.com",
+  "license": "MIT",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.18.2",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.15.5",
@@ -15,7 +29,6 @@
     "mongoose": "^5.0.0-rc1",
     "morgan": "~1.9.0",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "serve-favicon": "~2.4.5"
+    "passport-local": "^1.0.0"
   }
 }

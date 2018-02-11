@@ -12,7 +12,7 @@ Mongodb
 
 Handlebars
 
-Skeleton js
+Skeleton css
 
 ## Setup
 
